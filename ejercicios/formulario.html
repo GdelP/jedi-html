@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registro para buscaminas online</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="noticia.html">Noticia</a></li>
+        <li><a href="recepta.html">Recepta</a></li>
+        <li><a href="tabla.html">Tabla</a></li>
+        <li><a href="formulario.html">Formulario</a></li>
+      </ul>
+    </nav>
+
+    <h1>Registro</h1>
+    <p>
+      Registro para el buscaminas. Todos los campos son obligatorios. Puedes
+      clicar en los labels para seleccionar el input field. Se comprueba el
+      formato del mail y zip-code de manera muy rudimentaria.
+    </p>
+    <!-- Form contiene: Name(texto, arbitrario), password(asteriscos), zip
+    code(numerico), country (desplegable), submit(boton)-->
+    <form  method="POST" autocomplete="on" name="register-buscaminas">
+      <label for="input-user">User:</label><input id="input-user" type="text" name="user" maxlength="50" autofocus required><br>
+      <label for="input-pass">Password:</label> <input id="input-pass" type="password" name="password" maxlength="50"
+                                                       required><br>
+      <label for="input-email">E-mail:</label> <input id="input-email" type="email" name="email" maxlength="100" required><br>
+      <label for="input-zip">Zip code:</label> <input id="input-zip" type="text" name="zip code" maxlength="20" required
+                                                      pattern="^\d{5}(?:[-\s]\d{4})?$"><br>
+      <!-- The value IS the name of the country. We could use a known and
+      battle-tested id assignation to countries, but using
+      our own half-baked implementation based on casting
+      strings to integers and having special values is
+      completely out of consideration.
+      -->
+      <label for="input-country">Country:</label> <select id="input-country"
+      name="country" required>
+        <!-- Empty value. It's rejected by the required attribute above -->
+        <option value=""></option>
+        <option value="spain">Spain</option>
+        <option value="france">France</option>
+        <option value="uk">UK</option>
+        <option value="other">Other</option>
+      </select><br>
+      <input type="submit"><br>
+    </form>
+
+    <footer>
+      Alejandro Velasco
+    </footer>
+  </body>
+</html>

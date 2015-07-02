@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Elementos semanticos menos conocidos</title>
+  </head>
+
+  <body>
+    <article>
+    <header>
+      Here we have the navigation links inside nav tags. We decided to put it
+      before anything, although it's not pretty without CSS formatting. CSS is
+      out of scope for this case, so everything is ok ^^
+      <nav>
+        <ul>
+          <li><a href="noticia.html">Noticia</a></li>
+          <li><a href="recepta.html">Recepta</a></li>
+          <li><a href="tabla.html">Tabla</a></li>
+          <li><a href="formulario.html">Formulario</a></li>
+          <li><a href="css1.html">CSS 1</a></li>
+        </ul>
+      </nav>
+      <h1>Header</h1>
+      <p>A header contains introductory content. We can have several, although we
+      choose to have only one for the full document in this case.</p>
+    </header>
+    <h1>Article</h1>
+    <p>
+    All of this document is inside an article tag. If we work more on the
+    writing, we could interpret this full document as a single article
+    describing less-known semantic elements. An article should be independent
+    from the rest. We could apply article tags to every paragraph, but we
+    would be violating the semantic restriction of article. Beware!
+    </p>
+
+    <h1>Sample output and variable</h1>
+    This is the output when executing my last C++ code. It is represented by
+    the tags samp, which represent the sample output of a program.
+    <p>
+    <samp>Out of bounds access. [Stack-trace follows]</samp>
+    </p>
+
+    <p>
+    This error was related to bad use of a variable called <var>myid</var> of
+    type <em>int[]</em>. myid is surrounded by var tags for indicating it is a
+    variable.
+    </p>
+
+    <h1>Cite and abbr</h1>
+    <p>
+      We can read about the above kind of errors in the book <cite>C++ for
+      beginners faketitle</cite> by <abbr title="C++ Beginners
+      Group">C++BG</abbr>. In this paragraph we have used cite tag for citing
+      a boog and abbr tag for defining an abbreviature with it's expansion.
+    </p>
+
+    <h1>Definition</h1>
+    <p>
+      <dfn>C++</dfn> is a multi-paradigm programming language.
+    </p>
+    <p>
+      The last paragraph contains the tag dfn for describing some text. In our
+      case, we describe <em>C++</em> with the contents of the last paragraph.
+    </p>
+
+    <h1>Sup and subindexes</h1>
+    <p>
+    Although rendering equations might be hard with HTML, we can try. Let's
+    try to work with subscripts and superscripts. For that, let's define two
+    points and the distance between them. We will use tags sub and sup several
+    times for indicating text above and down the rest of the text.
+    </p>
+    <p>
+      Point A: p<sub>0</sub> = (x<sub>0</sub>, y<sub>0</sub>)
+      <br>Point B: p<sub>1</sub> = (x<sub>1</sub>, y<sub>1</sub>)
+      <br>dist(A,B)=((x<sub>0</sub>-x<sub>1</sub>)<sup>2</sup> +
+                     (y<sub>0</sub>-y<sub>1</sub>)<sup>2</sup>)
+                    <sup>1/2</sup>
+    </p>
+
+    <h1>br, hr</h1>
+    br tag is a line break. There are several line breaks in this
+    document. The next sections will be separated by hr. It is rendered as an
+    horizontal line by default. However, the semantic information is more
+    interesting: hr indicates a thematic break. Thus, we are supposed to talk
+    about something else after hr tag in next source line.
+    <hr>
+
+    <h1>aside</h1>
+    <aside>
+      I haven't discovered any useful usage for aside without CSS for placing
+      it as a sidebar
+      </aside>
+
+    <h1>Address inside a footer</h1>
+    Address displays contact information for the author or owner. It is
+    displayed in the footer, just down here. The footer is part of the
+    article. However, we could make the footer part of any element: in any case,
+    it contains information related to it's parent.
+    <footer>
+      <address>
+      Europe, Spain, Catalonia, Barcelona. C/Street
+
+      <br>This is the address
+      </address>
+    </footer>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS exercise | Margin</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+         body html {
+             width: 100%;
+             height: 100%;
+         }
+         .lateral {
+             width: 10em;
+             margin: 0 0 0 0;
+             right: 75%;
+         }
+         nav ul {
+             list-style-type: none;
+             margin: 0;
+             padding: 0;
+         }
+         nav ul li {
+             display: list-item;
+             background: url('gradient.gif');
+             background-repeat: repeat-x;
+             height: 46px;
+             margin-bottom: 2px;
+         }
+         nav ul li .image {
+             display: inline-block;
+             width: 15px;
+             height: 100%;
+             top: 35%;
+             position: relative ;
+             background: url('sprite.gif');
+             background-position: -0px -0px;
+             background-repeat: no-repeat;
+             margin-left: 15px;
+             margin-right: 15px;
+         }
+         #image1 {
+             background-position: 0px 0;
+         }
+         #image2 {
+             background-position: -15px 0;
+         }
+         #image3 {
+             background-position: -30px 0;
+         }
+         #image4 {
+             background-position: -45px 0;
+         }
+         nav ul li p  {
+             display: inline-block;
+             line-height: 46px;
+             margin: 0 0 0 0;
+             padding: 0 0 0 0;
+             position: absolute;
+         }
+        </style>
+    </head>
+    <body>
+       <div class="lateral">
+        <nav>
+            <ul>
+                <li>
+                    <div class="image" id="image1"></div>
+                    <p>Resume</p>
+                </li>
+                <li>
+                    <div class="image" id="image2"></div>
+                    <p>RSS Feed</p></li>
+                <li>
+                    <div class="image" id="image3"></div>
+                    <p>Photos</p></li>
+                <li>
+                    <div class="image" id="image4"></div>
+                    <p>Links</p></li>
+            </ul>
+        </nav>
+        </div>
+
+        <!-- I want the footer down-->
+        <footer>
+            Alejandro Velasco
+        </footer>
+    </body>
+</html>
