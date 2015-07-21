@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dice</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+         html body {
+             width: 100%;
+             height: 100%;
+             position: absolute;
+         }
+         div {
+             position: absolute;
+         }
+         footer {
+             position: absolute;
+             bottom: 0;
+         }
+        </style>
+        <link rel="stylesheet" type="text/css" href="dado.css">
+        <script type="text/javascript" src="dado.js"> </script>
+    </head>
+<!-- TODO: Do not replicate all those circumferences. We can do it with less --
+  -- than 10, maybe as less as 7.-->
+    <body onload="initialize();">
+      <div onclick="diceClicked();" class="dice_container" id="dice_piece">
+        <div class="dice_number_1">
+          <div class="circumference"></div>
+        </div>
+        <div class="dice_number_2">
+          <div class="circumference"></div>
+          <div class="circumference"></div>
+        </div>
+        <div class="dice_number_3" id="show_6_1">
+          <div class="circumference"></div>
+          <div class="circumference"></div>
+          <div class="circumference"></div>
+        </div>
+        <div class="dice_number_4">
+          <div class="circumference"></div>
+          <div class="circumference"></div>
+          <div class="circumference"></div>
+          <div class="circumference"></div>
+        </div>
+        <div class="dice_number_5">
+          <div class="circumference"></div>
+          <div class="circumference"></div>
+          <div class="circumference"></div>
+          <div class="circumference"></div>
+          <div class="circumference"></div>
+        </div>
+        <div class="dice_number_6" id="hidden_6_1">
+          <div class="circumference"></div>
+          <div class="circumference"></div>
+          <div class="circumference"></div>
+          <div class="circumference"></div>
+          <div class="circumference"></div>
+          <div class="circumference"></div>
+        </div>
+      </div>
+
+      <div id="counter-container">
+        Points: <div id="points">0</div>
+      </div>
+
+
+      <!-- I want the footer down-->
+      <footer>
+        Alejandro Velasco
+      </footer>
+    </body>
+</html>

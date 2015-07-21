@@ -1,0 +1,72 @@
+
+#lower-preview {
+    top: 80%;
+    height: 20%;
+    width: 80%;
+    left: 10%;
+    right: 10%;
+}
+.preview {
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    display: inline-block;
+    opacity: 0.2;
+}
+/*TODO: We have a fixed number of photos, but this is NOT the general case. */
+#pre0 {
+    left: 0%;
+    src: "image0.png";
+    opacity: 0.9;
+}
+#pre1 {
+    left: 20%;
+    src: "image1.png";
+}
+#pre2 {
+    left: 40%;
+    src: "image2.png";
+}
+#pre3 {
+    left: 60%;
+    src: "image3.png";
+}
+#pre4 {
+    left: 80%;
+    src: "image4.png";
+}
+#photos-container {
+    height: calc(100% - 55px - 80px);
+    width: 100%;
+    background-color: black;
+    top: 50px;
+    border-width: 1px;
+    border-color: black;
+    position: absolute;
+}
+#center-image {
+    display: inline-block;
+    width: 80%;
+    height: 80%;
+    top: 0%;
+    position: absolute;
+    box-sizing: border-box;
+    left: 10%;
+    right: 10%;
+}
+.arrow {
+    color: white;
+    backgrond-color: black;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 10%;
+    text-align: center;
+    font-size: 100px;
+}
+#left-arrow {
+    left: 0;
+}
+#right-arrow {
+    right: 0;
+}

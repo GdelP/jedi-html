@@ -1,0 +1,26 @@
+#first  {
+    top: 50px;
+    margin: 75px 0 0 0;
+}
+img {
+    position: absolute;
+    z-index: 6;
+}
+#androitor {
+    position: absolute;
+    transition: left 5s ease, right 5s ease, top 5s ease, bottom 5s ease;
+    z-index: 5;
+}
+@keyframes blink {
+    0% { opacity: 0.05;}
+    50% { opacity: 1;}
+    100% { opacity: 0.05;}
+}
+#windows {
+    top: 50%;
+    left: 50%;
+    opacity: 0.5;
+    animation-name: blink;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}

@@ -1,0 +1,16 @@
+#resume-pre {
+
+}
+.field-name {
+    font-weight: bold;
+    display: inline-block;
+}
+.field-answer {
+    display: inline-block;
+    left: 10em;
+}
+
+#main-article {
+    top: 55px;
+    position: absolute;
+}

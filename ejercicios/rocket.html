@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rocket</title>
+        <meta charset="utf-8">
+        <style type="text/css">
+         html body {
+             width: 100%;
+             height: 100%;
+             position: absolute;
+         }
+         div {
+             position: absolute;
+         }
+         #rocket-img {
+           background-image: url("rocket.png");
+           background-repeat: no-repeat;
+           background-position: center;
+           width: 50px;
+           height: 50px;
+           top: calc(50% - 25px);
+           left: calc(100% - 50px);
+           z-index: 1;
+           transform: rotate(180deg);
+           transition: left 5s ease;
+         }
+         footer {
+             position: absolute;
+             bottom: 0;
+         }
+         #customButton {
+             display: inline-block;
+             background-color: gray;
+
+         }
+        #box {
+            background-color: red;
+            position: fixed;
+        }
+        </style>
+    </head>
+    <body>
+      <div class="customButton" id="button1"></div>
+      <div class="customButton" id="button2"></div>
+      <div class="customButton" id="button3"></div>
+      <div class="customButton" id="button4"></div>
+      <div id="box"></div>
+
+      <!-- I want the footer down-->
+      <footer>
+        Alejandro Velasco
+      </footer>
+    </body>
+</html>

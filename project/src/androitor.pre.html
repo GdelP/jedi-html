@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Androitor</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="androitor.css">
+        <link rel="stylesheet" type="text/css" href="footer.css">
+        <link rel="stylesheet" type="text/css" href="header.css">
+        <style type="text/css">
+          html {
+             width: 100%;
+             height: 100%;
+          }
+          html body {
+             position: absolute;
+             box-sizing: border-box;
+             margin: 0 0 0 0;
+         }
+         div {
+             position: absolute;
+         }
+         footer {
+           bottom: 0;
+         }
+        </style>
+        <script type="text/javascript" src="androitor.js"> </script>
+<!--        <script type="text/javascript" src="footer.js"> </script>
+        <script type="text/javascript" src="header.js"> </script>-->
+    </head>
+    <body onload="initialize();">
+#include<header.html>
+
+        <img id="androitor" src="img-androitor/robot.png"></img>
+        <img id="objective" src="img-androitor/a1.png" onclick="clicOnObjective();"></img>
+        <img id="windows" src="img-androitor/w1.png"
+        onclick="clicOnWindows();"></img>
+<!-- TOOD: Marcadores, game menu, gameo ptions: OUT OF SCOPE-->
+<!--        <div id="points">Points:-->
+
+#include<footer.html>
+    </body>
+</html>

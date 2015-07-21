@@ -22,7 +22,7 @@
              padding: 0 0 0 0;
              z-index: 0;
          }
-         #big-face {
+         #big_face {
              left: calc(50% - 15%) ;
              width: 25%;
              height: 80%;
@@ -33,9 +33,11 @@
              border-bottom-right-radius: 100% 25%;
              z-index: -1;
          }
+
+         /* Eyes */
          #eyes-container {
              top: calc(50% - 15%) ;
-             left: -5%;
+             left: calc(-5% - 3px);
              width: 110%;
              height: 20%;
              border-top-left-radius: 20% 20%;
@@ -45,7 +47,7 @@
              z-index: -1;
          }
          #eyes-container-black {
-             top: calc(50% - 15%) ;
+             top: calc(50% - 15%);
              left: 15%;
              right: 15%;
              top: 10%;
@@ -83,6 +85,8 @@
            height: 30%;
            border-radius: 100%;
          }
+
+         /* Antenna */
          #antenna {
            position: relative;
          }
@@ -91,7 +95,7 @@
            border-radius: 100% 100%;
            width: 30%;
            height: 7%;;
-           left: 35%;
+           left: calc(35% - 3px);
            top: -0.5%;
          }
          #antenna-body {
@@ -101,16 +105,18 @@
            border-bottom-right-radius: 15% 15%;
            width: 30%;
            height: 250%;
-           left: 35%;
+           left: calc(35% - 3px);
            top: calc(-250% + 15%);
          }
          #antenna-top {
            border-radius: 100% 100%;
            width: 120%;
-           height: 40%;
-           left: -20%;
-           top: -20%;
+           height: 50%;
+           left: calc(-10% - 3px);
+           top: -25%;
          }
+
+         /* Mouth */
          #mouth-container {
            position: absolute;
            display: block;
@@ -128,12 +134,14 @@
            border-style: solid;
            border-collapse: collapse;
            border-spacing: 0;
+           z-index: 1;
          }
          #mouth-container tbody {
            display: block;
            height: 100%;
            width: 100%;
            table-layout: fixed;
+           z-index: 1;
          }
          #mouth-container tbody tr {
            display: block;
@@ -141,6 +149,7 @@
            width: 100%;
            padding: 0 0 0 0;
            margin: 0 0 0 0;
+           z-index: 1;
          }
          #mouth-container tbody tr td {
            display: inline-block;
@@ -154,6 +163,7 @@
            padding: 0 0 0 0;
            margin: 0 0 0 0;
            left: -20%;
+           z-index: 1;
          }
 
          #horizontal-line {
@@ -191,30 +201,230 @@
          #vl4 {
            left: calc((20% * 4) - 1px);
          }
+
+
+         /* Animaciones */
+         @keyframes antenna-glow {
+         0% {box-shadow: 0 0 200px red;}
+         50% {box-shadow: 0 0 0px red;}
+         100% {box-shadow: 0 0 200px red;}
+         }
+         #antenna-top {
+          animation-name: antenna-glow;
+         animation-duration: 4s;
+         animation-iteration-count: infinite;
+         }
+
+         /* Rayos y truenos, madafacka*/
+         @keyframes glow {
+           0% {
+             box-shadow: 0 0 0 0 green;
+           }
+           100% {
+             box-shadow: 0 0 5px 2px green;
+           }
+         }
+         @keyframes grow-width {
+           0% {
+             width: 0%;
+           }
+           100% {
+             width: 100%;
+           }
+         }
+         @keyframes x-infinite-move {
+           0% {
+             left: 0%;
+           }
+           5% {
+             left: 0%;
+           }
+           100% {
+             left: 2000%;
+             display: none;
+           }
+         }
+         .plasma-ray-width {
+           width: 100%;
+           height: 100%;
+           animation-name: grow-width;
+           animation-duration: 0.1s;
+           animation-iteration-count: 1;
+           animation-timing-function: linear;
+/*cubic-bezier(.61, .12, .68, .65);*/
+           z-index: 4;
+           animation-play-state: paused;
+         }
+         .plasma-ray-move {
+           width: 300%;
+           height: 1%;
+           animation-name: x-infinite-move;
+           box-shadow: 0 0 0 0 black;
+           animation-duration: 2.1s;
+           animation-iteration-count: infinite;
+           animation-timing-function: linear;
+/*cubic-bezier(.61, .12, .68, .65);*/
+           z-index: 4;
+           animation-play-state: paused;
+         }
+         .plasma-ray-glow {
+           width: 100%;
+           height: 100%;
+           animation-name: glow;
+           animation-duration: 0.7s;
+           animation-iteration-count: 1;
+           animation-timing-function: cubic-bezier(1,.06,.85,.93);
+           box-shadow: 0 0 5px 2px green;
+           z-index: 4;
+           animation-play-state: paused;
+         }
+         .plasma-ray {
+           width: 100%;
+           height: 100%;
+           display: inline-block;
+           visibility: visible;
+           background-color: green;
+           border-width: 0px;
+           border-style: none;
+           box-shadow: 0 0 5px 2px green;
+           z-index: 4;
+         }
+         #ray1 {
+           top: 0;
+           bottom: 0;
+           left: 0;
+           right: 0;
+           transform: rotate(40deg);
+           transform-origin: 50% 0;
+           width: 100%;
+           height: 100%;
+           z-index: 5;
+         }
+         #ray2 {
+           transform: rotate(60deg);
+           transform-origin: 50% 0;
+           width: 100%;
+           height: 100%;
+         }
+         #ray3 {
+           transform: rotate(120deg);
+           transform-origin: 50% 0;
+           width: 100%;
+           height: 100%;
+           top: 0;
+           bottom: 0;
+           left: 0;
+           right: 0;
+         }
+         #ray4 {
+           transform: rotate(160deg);
+           transform-origin: 50% 0%;
+           width: 100%;
+           height: 100%;
+           top: 0;
+           bottom: 0;
+           left: 0;
+           right: 0;
+         }
+         #invisible_ray_origin {
+           width: 100%;
+           height: 100%;
+           z-index: 10;
+         }
+
+         #button-for-rays {
+             width: 10%;
+             height: 10%;
+             border-radius: 100% 100%;
+             background-color: red;
+             border-width: 10px;
+             border-color: gray;
+             border-style: solid;
+             top: 10%;
+             left: 10%;
+         }
+         #button-for-rays p {
+             text-align: center;
+             color: yellow;
+         }
+
+         #button-for-rays:hover + div .plasma-ray-move,
+         #button-for-rays:hover + div .plasma-ray-glow,
+         #button-for-rays:hover + div .plasma-ray-width {
+             animation-play-state: running;
+         }
         </style>
     </head>
     <body>
-      <div class="gray-cellshading" id="big-face">
+      <!-- Doesn't work without javascript-->
+      <audio>
+        <source src="bender.mp4" type="audio/mpeg">
+      </audio>
+      <div id="button-for-rays">
+        <p>
+        Start/stop rays
+        </p>
+      </div>
+      <div class="gray-cellshading" id="big_face">
         <div class="gray-cellshading" id="antenna-base">
           <div class="gray-cellshading" id="antenna-body">
-            <div class="gray-cellshading" id="antenna-top"></div>
+            <div class="gray-cellshading" id="antenna-top">
+              <div id="invisible_ray_origin">
+                <div id="ray1">
+                  <div class="plasma-ray-move">
+                    <div class="plasma-ray-width">
+                      <div class="plasma-ray-glow">
+                        <div class="plasma-ray"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="ray2">
+                  <div class="plasma-ray-move">
+                    <div class="plasma-ray-width">
+                      <div class="plasma-ray-glow">
+                        <div class="plasma-ray"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="ray3">
+                  <div class="plasma-ray-move">
+                    <div class="plasma-ray-width">
+                      <div class="plasma-ray-glow">
+                        <div class="plasma-ray"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="ray4">
+                  <div class="plasma-ray-move">
+                    <div class="plasma-ray-width">
+                      <div class="plasma-ray-glow">
+                        <div class="plasma-ray"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="gray-cellshading"  id="eyes-container">
           <div class="gray-cellshading"  id="eyes-container-black">
-              <div id="eye_right">
-                <div class="eye_iris"></div>
-              </div>
-              <div id="eye_left">
-                <div class="eye_iris"></div>
-              </div>
+            <div id="eye_right">
+              <div class="eye_iris"></div>
+            </div>
+            <div id="eye_left">
+              <div class="eye_iris"></div>
+            </div>
           </div>
         </div>
 
         <div id="mouth-container">
 
-<!--          <tbody>
+          <!--          <tbody>
             <tr>
               <td></td><td></td><td></td><td></td><td></td>
             </tr>
@@ -223,7 +433,7 @@
             </tr>
           </tbody>-->
           <!-- Somehow create the mouth. Maybe tables? There is no wway to
-          make it work. Let's change the tactics. What about lines-->
+          make it work. Lets change the tactics. What about lines-->
           <div id="horizontal-line"></div>
           <div class="vertical-line" id="vl1"></div>
           <div class="vertical-line" id="vl2"></div>
@@ -232,9 +442,9 @@
         </div>
       </div>
 
-        <!-- I want the footer down-->
-        <footer>
-            Alejandro Velasco
-        </footer>
+      <!-- I want the footer down-->
+      <footer>
+        Alejandro Velasco
+      </footer>
     </body>
 </html>

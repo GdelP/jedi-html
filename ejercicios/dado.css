@@ -1,0 +1,138 @@
+/* let's go with the points*/
+#counter-container {
+    background-color: olive;
+    border-radius: 10%;
+    width: 10em;
+    height: 1em;
+}
+
+
+
+/*First, let's define containers for dice pieces*/
+.dice_container {
+    background-color: black;
+    position: absolute;
+    z-index: 0;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    width: 100px;
+    height: 100px;
+}
+
+
+/* Let's define circumferences */
+/* First, a simple circumference */
+.circumference {
+    width: 20%;
+    height: 20%;
+    border-radius: 100%;
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+}
+.dice_number_1, .dice_number_2, .dice_number_3, .dice_number_4, .dice_number_5, .dice_number_6 {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+/* 1 */
+.dice_number_1 > .circumference {
+    top: 40%;
+    right: 40%;
+}
+/* 2 */
+.dice_number_2 > .circumference {
+    top: 40%;
+    right: 20%;
+}
+.dice_number_2 > .circumference + .circumference {
+    top: 40%;
+    right: 60%;
+}
+
+
+/* 3 right */
+.dice_number_3 > .circumference {
+    top: 20%;
+    left: 20%;
+}
+.dice_number_3 > .circumference + .circumference {
+    top: 40%;
+    left: 40%;
+}
+.dice_number_3 > .circumference + .circumference + .circumference
+{
+    top: 60%;
+    left: 60%;
+}
+
+/* 5 */
+.dice_number_5 > .circumference {
+    top: 20%;
+    right: 20%;
+}
+.dice_number_5 > .circumference + .circumference {
+    top: 20%;
+    right: 60%;
+}
+.dice_number_5 > .circumference + .circumference + .circumference {
+    top: 60%;
+    right: 20%;
+}
+.dice_number_5 > .circumference + .circumference + .circumference + .circumference {
+    top: 60%;
+    right: 60%;
+}
+.dice_number_5 > .circumference + .circumference + .circumference + .circumference + .circumference {
+    top: 40%;
+    right: 40%;
+}
+
+/* 4 */
+.dice_number_4 > .circumference {
+    top: 20%;
+    right: 20%;
+}
+.dice_number_4 > .circumference + .circumference {
+    top: 20%;
+    right: 60%;
+}
+.dice_number_4 > .circumference + .circumference + .circumference {
+    top: 60%;
+    right: 20%;
+}
+.dice_number_4 > .circumference + .circumference + .circumference + .circumference {
+    top: 60%;
+    right: 60%;
+}
+
+/* 6 */
+.dice_number_6 > .circumference {
+    top: 20%;
+    right: 20%;
+}
+.dice_number_6 > .circumference + .circumference {
+    top: 20%;
+    right: 40%;
+}
+.dice_number_6 > .circumference + .circumference + .circumference {
+    top: 20%;
+    right: 60%;
+}
+.dice_number_6 > .circumference + .circumference + .circumference + .circumference {
+    top: 60%;
+    right: 20%;
+}
+.dice_number_6 > .circumference + .circumference + .circumference + .circumference  + .circumference {
+    top: 60%;
+    right: 40%;
+}
+.dice_number_6 > .circumference + .circumference + .circumference + .circumference  + .circumference  + .circumference {
+    top: 60%;
+    right: 60%;
+}
+#show_6_1 {
+    display: block;
+}

@@ -1,0 +1,78 @@
+/*First, let's define containers for domino pieces*/
+html, body {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 0 0;
+    top: 0;
+    bottom 0;
+    left: 0;
+    right: 0;
+}
+body {
+    min-height: 100%;
+    clear:both;
+    position: absolute;
+    height: auto;
+/*    overflow: hidden;*/
+}
+html {
+    height: 100%;
+}
+#main-container {
+    min-height: 100%;
+    position: relative;
+    margin: 0 0 0 0;
+    width: 100%;
+}
+footer {
+    left: calc(50% - 75px);
+    height: 75px;
+    width: 75px;
+    bottom: -75px;
+/*    top: calc(100% - 75px);*/
+    position: absolute;
+}
+.big-sphere {
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    background-color: #3C7FAF;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+}
+.little-sphere {
+    width: 15%;
+    height: 15%;
+    border-radius: 100%;
+    background-color: white;
+    position: absolute;
+}
+#UPC-text {
+    font-size: 10pt;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 900;
+    color: white;
+    display: block;
+    top: 45%;
+    left: 30%;
+    position: relative;
+}
+#sph1-1, #sph2-1, #sph3-1 {
+    left: calc(32% - (15% / 2));
+}
+#sph1-2, #sph2-2, #sph3-2 {
+    left: calc(50% - (15% / 2));
+}
+#sph1-3, #sph2-3, #sph3-3 {
+    left: calc(68% - (15% / 2));
+}
+#sph1-1, #sph1-2, #sph1-3 {
+    top: 13%;
+}
+#sph2-1, #sph2-2, #sph2-3 {
+    top: 30%;
+}
+#sph3-1, #sph3-2, #sph3-3 {
+    top: 47%;
+}

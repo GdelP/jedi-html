@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Photos</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="fotos.css">
+        <link rel="stylesheet" type="text/css" href="footer.css">
+        <link rel="stylesheet" type="text/css" href="header.css">
+        <style type="text/css">
+         html body {
+             width: 100%;
+             height: 100%;
+             position: absolute;
+             box-sizing: border-box;
+             margin: 0 0 0 0;
+         }
+         div {
+             position: absolute;
+         }
+         footer {
+           bottom: 0;
+         }
+        </style>
+        <script type="text/javascript" src="fotos.js"> </script>
+<!-- <script type="text/javascript" src="footer.js"> </script>
+        <script type="text/javascript" src="header.js"> </script>-->
+    </head>
+    <body onload="initialize();">
+<div class="lateral">
+  <nav>
+    <ul>
+      <li>
+        <a href="resume.html">
+          <div class="image" id="image1"></div>
+          <div class="menu-text">Resume</div>
+        </a>
+      </li>
+      <li>
+        <a href="noticia.html">
+          <div class="image" id="image2"></div>
+          <div class="menu-text">Noticia</div>
+        </a>
+      </li>
+      <li>
+        <a href="fotos.html">
+          <div class="image" id="image3"></div>
+          <div class="menu-text">Photo</div>
+        </a>
+      </li>
+      <li>
+        <a href="androitor.html">
+          <div class="image" id="image4"></div>
+          <div class="menu-text">Androitor</div>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+        <div id="photos-container">
+          <div id="left-arrow" class="arrow" onclick="changePhoto(-1);"> &lt; </div>
+          <img id="center-image" src="image0.png"></img>
+          <!-- We have a fixed number of images-->
+          <div id="lower-preview">
+            <img class="preview" id="pre0" src="image0.png"></img>
+            <img class="preview" id="pre1" src="image1.png"></img>
+            <img class="preview" id="pre2" src="image2.png"></img>
+            <img class="preview" id="pre3" src="image3.png"></img>
+            <img class="preview" id="pre4" src="image4.png"></img>
+          </div>
+          <div id="right-arrow" class="arrow" onclick="changePhoto(1);"> &gt; </div>
+        </div>
+<!-- I want the footer down-->
+<footer>
+  <div class="big-sphere">
+    <div class="little-sphere" id="sph1-1"></div>
+    <div class="little-sphere" id="sph1-2"></div>
+    <div class="little-sphere" id="sph1-3"></div>
+    <div class="little-sphere" id="sph2-1"></div>
+    <div class="little-sphere" id="sph2-2"></div>
+    <div class="little-sphere" id="sph2-3"></div>
+    <div class="little-sphere" id="sph3-1"></div>
+    <div class="little-sphere" id="sph3-2"></div>
+    <div class="little-sphere" id="sph3-3"></div>
+    <p id="UPC-text">
+      UPC
+    </p>
+  </div>
+</footer>
+    </body>
+</html>
